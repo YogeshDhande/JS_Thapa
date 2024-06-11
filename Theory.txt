@@ -1,0 +1,249 @@
+                               ----------- JavaScript -------------  
+                  -----------  -------------  
+                  ----------- CLIENT vs SERVER -------------
+Client hit the URL("www.google.com") in browser and it request to server, server checks th IP address and response with file(HTML,CSS,JS).
+
+HTML - provide the structure and content to a webpage.
+CSS - Style and design the apperance of the webpage.
+JS - Add interactivity and dynamic behavior to the webpage.
+
+
+                  ----------- JavaScript ------------- 
+It improves the user experience of webpage by converting static pages into interactive one
+                                 OR
+js is use to update and changes both HTML, CSS. IT adds behavior to webpage.
+
+
+
+                  ----------- History of JS ------------- 
+in 1995, Brendan Eich has create javascript in just 10 days at Netscape, first name is MOCHA then LIVESCRIPT ,then JavaScript
+in 1996 finaly the js was created and use by developrs
+in 1997, it was submitted to ECMA for standardrization which result in ecmascript.
+in 2015, this year the most important updates has been release.
+
+
+
+                  ----------- Three ways to write JS ------------- 
+-Inline js
+   <button onclick="alert(hello)">click me</button>
+
+-Internal js
+   <script>
+      console.log("hello JavaScript")
+   </script>
+
+-External js
+    <script src="app.js"></script>   
+
+
+                  ----------- Variable -------------  
+Variable:-A Variable is a container that holds a value.It has a name and can be used to store and manipulate data in program.
+
+Values:-A value is piece of information that a program can work with.It can be number, text, true/false, etc.
+
+Rules and Best Practies:-
+ -Variable name must start with an letter, or an underscore(_), or an Dollar sign($).
+ -Variable cannot contain spaces.
+ -Variable cannot be as same as reserved keyword such as if, const, new, this.....
+ -Variable are case sensitive.
+ -Variable can be as long as you need
+ -By convention, javascript Variable names are written in camelCase.
+
+Example:-
+    var my_firstName ="Java";               //Valid
+    var _mylastName$ ="Script";             //valid
+    var 123myAge = "25"                     //InValid
+    var $cityName = "Netscape"              //Valid
+    var my@Email = "javascript@gmail.com"   //Invalid
+
+
+
+                  ----------- Data Types -------------  
+
+Primitive DT                        Object DT
+Number                               An Object
+String                               An Array
+Boolean                              An Date
+BigInt
+Undefined
+Null
+Symbol
+
+                  ----------- Typeof -------------  
+var myage = 1
+console.log(typeof myage)
+
+-typeof null
+ var age=null
+ console.log(typeof null) --- object(it is because of js bug)
+
+-convert String to Number 
+ we just need to add "+" sign before string 
+ var mynum = 10
+ console.log(typeof +mynum);   ---Number 
+ console.log(typeof Number(mynum));  ---Number
+
+-convert Number to String
+ we just need to add "+"  After number 
+ var mynum = 10
+ console.log(typeof mynum+);   ---String
+ console.log(typeof String(mynum));  ---String
+
+                  ----------- parseInt and parseFloat -------------
+Both are functions in javascript used to converting string to number, but both have different use cases.
+console.log(parseInt("123"))
+console.log(parseFloat("12.3"))
+                  ----------- Type Coercion -------------
+ -it is the automatic conversion of values from one data type to another.
+ two types of Coercion in javascript:-implicit and explicit, implicit Coercion happens automatically, while explicit can done manully by programmers.
+
+                  ----------- Tricky Interview Questions -------------
+1.console.log(10 + "20")    --- 1020
+2.console.log(9 - "5")      --- 4
+3.console.log("Java" + "Script")     ---JavaScript
+4.console.log(" " + " ")      --- it will empty
+5.console.log(" " + 0)       --- 0 , datatype will be String
+6.console.log("vinod" - "Java")      --- NaN 
+7.console.log(true + true)       --- 2, true=1 and js add it 
+8.console.log(true + false)      --- 1
+9.console.log(false + true)      --- 1
+10.console.log(false - true)     --- (-1)
+
+
+                  ----------- Expersion and Operator -------------
+
+      5    +          75           -| 
+      |    |          |             |-- Expersion
+Operand   operator   Operand       _|
+
+1.Assignment Operator
+e.g '='
+
+2.Arithmetic Operator
+e.g '+,-,/,*,%'
+
+var result="java"/2
+console.log(result)    --- NaN
+
+var result = 0.1 +0.2
+console.log(result)      --- 0.3000000000000004, it is because of binary number 
+console.log(result.toFixed(2))       --- 0.30, it will give only upto the value has given.
+
+var result = 0.2 +0.2
+console.log(result)      --- 0.4
+
+var result = 55 * "result"
+console.log(result)       --- NaN
+
+   '=='
+   checks if two values are equal,performing type coercion if necessary
+
+   '==='
+   checks if two values are equal, without performing type coercion.
+
+4.Ternary operator
+  condition?ExpersionifTrue:ExpersionifFalse;
+
+console.log(2 < 12 < 5)--- true, because 2 is less than 12 and its true so, true=1 and 1<5== true.
+console.log("20" + 10 +10)   --- 201010, same as above reason.
+
+5.switch statement
+  switch(expression){
+    case value1:
+    break;
+
+    case value2:
+    break;
+
+    case value3:
+    break;
+
+    default:
+    break;
+  }
+
+6.while loop
+  while(Condition){
+    //excute code
+  }
+
+7.Do while Loop 
+  do{
+    //excute code
+  }while(Condition)
+
+8. For loop
+  For(intilazation, condition, itration){
+    //excute code
+  }
+
+9. Infinite loop
+   for(;;){
+    //excute code
+   }
+
+
+                  ----------- Functions ------------- 
+ Function is a block of reuseable code that perform a specific task or set of tasks.Functions are use to organize code into modular and mangeable pieces, promote code reuse, and makes program more readable.
+   
+   function function_Name(Parameter){
+          //execute code 
+          return result        //optinal return statement
+   }
+
+1.function declaration
+  function sum(){
+
+  }
+
+2.function invoketion
+  sum();
+
+3. function Parameters
+  function sum(name){
+    console.log("hello" + name)
+  }
+
+4. function experession
+  let result = function sum(name){
+                 console.log("hello" + name)
+         }
+ result("JavaScript")
+
+5. Anonymous function
+   let result = function sum(name){
+                 console.log("hello" + name)
+         }
+ result("JavaScript")
+
+6.immediate innvoke function
+ (function(name) {
+    console.log("hello" + name)
+ })("JavaScript");
+
+7. fat arrow function
+   const sum = (a, b) =>{
+    var c = a + b;
+    console.log("Addition of two number : "+ c)
+   }
+
+   sum(5, 10);
+
+8.Reverse a string using function 
+
+const strreverse = (str) =>{
+  let reverse = "";
+  for(let char= str.length - 1; char>= 0; char--){
+    reverse = reverse + str[char];
+  }
+  return reverse;
+}
+console.log(strreverse("Yogesh"))
+
+
+
+
+
+
+
+
