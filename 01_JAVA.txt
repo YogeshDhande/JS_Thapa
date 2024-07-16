@@ -1,0 +1,94 @@
+
+         JAVA- Just Another Virtual Analyzer
+         
+1.Why you must learn Java
+- one of the most popular language.Java currently runs on 60,00,00,00,000 devices.
+- wide usage(weeb-app, backend, mobile apps, enterprise software).
+- high paying.
+- object oriented.
+- Rich APIs and community support.
+
+  2.What is programming language?
+- computers only understand 0/1 or on/off
+- giving instructions to a computer
+- instructions: tells computer what to do.
+- these instuctions are called code.
+- human instructions are given in high level language.
+- compiler converts high level language to low level languages or machine code.
+
+3.What is Algorithms
+- an algorithm is a step by step procedure for solving a problem or performing a task.
+
+4.What is syntax
+- structure of words in a sentence.
+- rules of the language
+- for programing exact syntax must be folllwed.
+
+5.History of Java
+- sun microsystem-company name
+- Inventor- James Gosling
+- 1991-published his paper from 1995 the actual implementation started initially the project name was "Green Project" then comes "Oak" and finally it is named as "JAVA". Now, Java is owned by Oracle.
+- Write once, Run Anywhere.
+
+6.Robust
+- robust due to its strong memory management, exception handling, and type checking mechanisms which helps in preventing systme crashes and ensuring re;iable performance.
+
+7.MultiThreading
+- in programing is the ability of a cpu to execute multiple threads concurrently, allowing for more efficiently processing and task management.
+
+8.Architecture Neutral
+Java ia Architecturally Neutral because its compiled code can run on any device with a java virtual machine(JVM), regardless of the underlying hardware Architecture.
+
+9.Interpreted and high performance
+
+10. Distributed
+is inherently distibuted, designed to facilate network-based application development and interaction
+
+JVM:- java Virtual machine
+    -it ia an abstract machine that enables your computer to run a java program.
+    -when you run the java program, java compiler first compiles your java code to bytecode.Then, the jvm translates bytecode into native machine code(sets of instructions that a computer's CPU executes directly).
+
+JRE:- java runtime environment
+    -it is a software package that provides java class libraries, java virtual machine and other components that are required to run java aaplications.
+
+JDK:- java development kit
+    -it is a software development kit required to develop application in java.In addition to JRE, JDK also contains a number of development tools(compilers, javadoc, java debugger)
+
+Reserve Keywords:-
+
+Java Variable:- is case sensitive, musr start with a letter, underscore, dollar
+
+Java Data types:-
+boolean:- 1bit(false)
+byte:- 1byte/8bit (0)
+short:- 2byte (0)
+int:- 4byte (0)
+long:- 8byte (0L)
+float:- 4byte (0.0f)
+double:- 8byte (0.0d)
+char:- 2bytes '\u0000'
+
+Data type Implicit(direct/widening) conversion:
+Data type explicit conversion: type casting
+long count = 12;
+int contInt =(int)count;
+
+Decimal to binary:
+
+binary to Decimal: 
+
+binary Addition:
+  
+
+Types Of Operators in Java:
+1.Arithmatic Operators:- [+, -, *, /, %]
+2.Assignment Operators:-[=, +=, -=, *=, /=, %=]
+3.Relational Operators:-[==, !=, >, <, >=, <=]
+4.Logical Operators:-[&&, ||, !]
+5.Unary Operators:-[]
+6.Bitwise Operators:-[-, <<, >>, >>>, &, ^]
+7.ternary Operators:-[?, :]
+
+Taking user from input from Scanner:- scanner class store in java.util.scanner
+Scanner sc=new Scanner(system.in)
+

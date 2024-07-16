@@ -183,62 +183,6 @@ console.log("20" + 10 +10)   --- 201010, same as above reason.
    }
 
 
-                  ----------- Functions ------------- 
- Function is a block of reuseable code that perform a specific task or set of tasks.Functions are use to organize code into modular and mangeable pieces, promote code reuse, and makes program more readable.
-   
-   function function_Name(Parameter){
-          //execute code 
-          return result        //optinal return statement
-   }
-
-1.function declaration
-  function sum(){
-
-  }
-
-2.function invoketion
-  sum();
-
-3. function Parameters
-  function sum(name){
-    console.log("hello" + name)
-  }
-
-4. function experession
-  let result = function sum(name){
-                 console.log("hello" + name)
-         }
- result("JavaScript")
-
-5. Anonymous function
-   let result = function sum(name){
-                 console.log("hello" + name)
-         }
- result("JavaScript")
-
-6.immediate innvoke function
- (function(name) {
-    console.log("hello" + name)
- })("JavaScript");
-
-7. fat arrow function
-   const sum = (a, b) =>{
-    var c = a + b;
-    console.log("Addition of two number : "+ c)
-   }
-
-   sum(5, 10);
-
-8.Reverse a string using function 
-
-const strreverse = (str) =>{
-  let reverse = "";
-  for(let char= str.length - 1; char>= 0; char--){
-    reverse = reverse + str[char];
-  }
-  return reverse;
-}
-console.log(strreverse("Yogesh"))
 
 
 

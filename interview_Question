@@ -7,3 +7,223 @@ Data Types:-
 6.Explain the truthy and falsy values in javascript and provide Example.
 7.to check if a non-empty string is true or false in javascript, we can directly use if statement.
 8.What is the purpose of Nan value in javascript.
+
+Array:-
+1.What is differnece between ForEach and Map Loop in javascript.
+if you store foreach loop in variable then you need to return value
+and it does not give the return value, it gives undefined.
+foreach:- perform an action on each element
+-used when you want to iterate over the array elements and perform an action on each elements, but you don't need an new array.
+map:- create a new array with transformed elements. - used when you want to create new array based on tranformation of each element in the original array.
+
+2.Add dec at the end of an array
+const months=["Jan","march","April","June","July"]
+months.splice(months.length,0,"dec")
+
+3.What is the return value of splice method
+an empty
+
+4.update march to March
+const updateTheMonth = (months.indexOf("march"))
+months.splice(updateTheMonth, 1, "March");
+console.log(months);
+
+5.Delete June from an array
+const updateTheMonth = (months.indexOf("June"))
+months.splice(updateTheMonth, 1);
+console.log(months);
+
+6.let's say user wants to delete value 6
+const numbers = [1, 2, 3, 4, 5, 4, 6, 7, 8, 6, 9];
+value = 6;
+const result = numbers.filter((crrElem) =>{
+return curElem !=== value;
+});
+console.log(result);
+
+7.Given an array of products where each product has a name and a price, write a function that uses the filter method to return an array containing only products with a price less than or equal to 500.
+const products=[
+{name:"laptop", price:1200},
+{name:"phone", price:800},
+{name:"tablet", price:300},
+{name:"smartwatch", price:150},
+]
+--> const filterproducts = products.filter((currElem) =>{
+return currElem.price <= 500;
+})
+console.log(filterproducts);
+
+8.Find unique values
+const numbers = [1,2,3,4,6,5,6,7,8,9]
+const uniqueValues = numbers.filter((currElem, index, arr) =>{
+return arr.indexOf(curElem) === index;
+})
+
+9.Using map to square each number and create a new array
+const numbers = [1,2,3,4,5]
+const result = numbers.map((currElem) => currElem \* currElem);
+console.log(result);
+
+10.using the map method, write a function that takes an array of strings and returns a new array where each string is capitalized
+const words = ["apple", "banana", "cherry","date"]
+
+const result = words.map((curElem) =>{
+return curElem.toUpperCase();
+});
+console.log(words);
+
+11.using the map method, write a function that takes an array of numbers and returns a new array where each number is squared, but only if it's an even number
+const numbers = [1,2,3,4,5,6,7,8,9,10]
+
+const result = numbers.map((currElem) => {
+if(curElem % 2 ===0){
+return curElem \* curElem;
+}
+}).filter((curElem) => curElem !=== undefined);
+console.log(result);
+
+12.using the map method, write a function that takes an array of names and returns a new array where each name is prefixed with 'Mr.'
+const names= ["ram", "yogesh", "sham"];
+const prefixName = names.map((curElem) => `Mr. ${curElem}`);
+console.log(prefixName);
+
+13.write a javascript function that calculates the total price of items in a shopping cart. The function should take an array of itme prices as input and return the total price.
+const prodPrice =[100,200,300,400,500];
+
+const totalPrice = prodPrice.reduce((accum, curElem) =>{
+return accm + curElem;
+});
+
+String:
+1.Write a JavaScript function that prints the letters 'a' through 'z' in the console. You should use a loop to iterate through the letters and print each one on a new line.
+
+for(let char = 97;char<=122;char++){
+console.log(String.fromCharCode(char));
+}
+
+2.write a function to count the number of vowel in string?
+const countVowels = (str) =>{
+const vowels = "aeiou";
+let count = 0;
+for(let char of str){
+if(vowels.includes(char)){
+count++;
+}
+}
+return count;
+}
+console.log(countVowels("My name is yogesh dhande"));
+
+3.write a function to check if all the vowels present in a string or not
+
+const checkAllVowelPresentOrNot = (str) =>{
+const vowels = "aeiou";
+for(let char of vowels){
+if(!str.includes(char)){
+return false;
+}
+}
+return true;
+}
+console.log(checkAllVowelPresentOrNot("My name is yogesh dhande"));
+
+
+Datee & Time :-
+1.write a function to add a specified number of days to a given data
+    const addDaysToDate = (date, extraDay) =>{
+        let updateDate = date.setDate(date.getDate() + extraDay)
+        return new Date(updateDate);
+    }
+
+    const date = new Date("2024-03-29")
+    const newDate = addDaysToDate(date, 7);
+    
+2.write a function to calculate the differnce in days between two given Datee. 
+
+    const getDayDifference = (d1, d2) =>{
+        let oneDay = 24 * 60 * 60 * 1000;
+        let diff = d2 - d1;
+        return diff / oneDay;
+    }
+    const date1 = new Date("2024-02-29")
+    const date2 = new Date("2024-03-29")
+    const daysDiff = getDayDifference(date1, date2);
+
+
+Timing Based Events:-
+
+1.WAP tha defines a function called repeatedfunction. This function should log the message "This function repeats every 1000 milliseconds to the console". Then, set up an intveral using setInterval() to call repeatedfunction every 1000 milliseconds. Additionally, after 5 seconds have elapsed, use setTimeout() to clear the interval previously set up. Make sure to log the message "Interval cleared after 5 seconds." when the interval is cleared.
+ const repeatedfunction = () =>{
+    console.log("This function repeats every 1000 milliseconds to the console");
+ }
+ repeatedfunction();
+ setTimeout(() =>{
+    clearInterval(myWork);
+ }, 5000);
+
+ const myWork = setInterval(repeatedfunction, 1000);
+
+Objects:-
+1.what will be the output:
+const target = {a:1,b:2}
+const source = {b:3,d:4}
+
+const mergeObje = Object.assign(target, source);
+console.log(mergeObje);
+
+2.Given an object representing a student , WAF to add a new subject with its corresponding grade to the student's record. Also check if the grades property is present or not?
+let student = {
+    name:"JS",
+    age:25,
+    grades:{
+        maths:90,
+        science:80,
+        history:95
+    },
+};
+
+=> 
+    const addSubjectGrade(student, subject, marks) =>{
+        if(!student.grade){
+            student.grade = {}
+        }
+        return (student.grade[subject] = marks)
+    }
+    addSubjectGrade(student, "computer", 99)
+    console.log(student)
+
+3.WAF that compares to object determine if they have the same properties and values
+let objA = {name: "alice", age:20,City:"New York"}
+let objB = {name: "alice", age:20,City:"New York"}
+let objC = {name: "Stuck", age:25,City:"Paris"}
+
+const areObjectsEqual = (obj1, obj2) =>{
+    let o1 = Object.keys(obj1)
+    let o2 = Object.keys(obj2)
+    if(o1.length =! o2.length){
+        // console.log("The keys are noe same.")
+        return false; 
+    }
+    for(let key in obj1){
+        if(obj1[key] ===! obj2[key]){
+            return false;
+        }
+    }
+}
+console.log(areObjectsEqual(objA, objB));
+console.log(areObjectsEqual(objA, objC));
+
+3.WAF that transform an array of an objects into an object where the keys are the object's id?
+    let inputArray = [
+        {id:1, name:"jhon"},
+        {id:1, name:"don"},
+        {id:1, name:"sham"}
+    ]
+
+    const arrayTools = (arr) =>{
+        let obj23 = {}
+        for(let key of arr){
+            obj[key.id] = key;
+        }
+        return obj23;
+    }

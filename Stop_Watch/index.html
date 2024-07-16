@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+</head>
+<body>
+    <section>
+        <p id="countDown">0</p>
+        <div>
+            <button class="startbtn">Start</button>
+            <button class="stopbtn">Stop</button>
+            <button class="resetbtn">Reset</button>
+            <button class="getTimebtn">Get Time</button>
+            <button class="clearTimebtn">Clear Time</button>
+        </div>
+            <div class="resetValue"></div>
+    </section>
+
+    <script>
+        const start_btn = document.getElementById('countDown');
+        const reset_value = document.querySelector(".resetValue");
+        let startCount = 0
+        let intervalID;
+        const startTime = () =>{
+            intervalID = setInterval(() => {
+                start_btn.innerText = startCount++;
+            }, 1000);
+        }
+
+        const stopTime = () =>{
+            clearInterval(intervalID);
+        }
+
+        const resetTime = () =>{
+            startCount = 0;
+            start_btn.innerText = startCount;
+            clearInterval(intervalID);
+        }
+
+        const getTime = () =>{
+            const newPara = document.createElement("p");
+            newPara.innerText = `Lap : ${startCount - 1}`;
+            if(startCount == 0) {
+                newPara.innerText = `Lap : ${startCount}`;
+            }
+            reset_value.append(newPara);
+        }
+
+        const clearTime = () =>{
+            reset_value.innerHTML = " ";
+        }
+        document.querySelector(".startbtn").addEventListener('click', startTime);
+        document.querySelector(".stopbtn").addEventListener('click', stopTime);
+        document.querySelector(".resetbtn").addEventListener('click', resetTime);
+        document.querySelector(".getTimebtn").addEventListener('click', getTime);
+        document.querySelector(".clearTimebtn").addEventListener('click', clearTime);
+    </script>
+</body>
+</html>

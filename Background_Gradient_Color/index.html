@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackGround Gradient Color</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(to right, #e3a426, #d23bcf);
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #btnOne, #btnTwo{
+            padding: 15px 30px;
+            border-radius: 1rem;
+            border: none;
+            font-size: 1.3rem;
+            font-weight: bold; 
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+        }
+        #btnOne{
+            margin-right: 1.5rem;
+        }
+        p{
+            font-size: 0.9rem;
+            text-transform: lowercase;
+            margin-bottom: 1.2rem;
+        }
+        .copyText{
+            padding: 10px 20px;
+            background-color: beige;
+            /* border-left: 6px solid rgb(49, 49, 215);
+            border-right: 6px solid rgb(49, 49, 215);
+            border-top: 2px solid rgb(49, 49, 215);
+            border-bottom: 2px solid rgb(49, 49, 215); */
+            font-weight: lighter;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="alignitem">
+            <button id="btnOne">#e3a426</button>
+            <button id="btnTwo">#d23bcf</button>
+        </div>
+        <p>Click here to Copy </p>
+        <div class="copyText">
+            background-image: linear-gradient(to right, #e3a426, #d23bcf)
+        </div>
+    </div>
+
+    <script>
+        const btn1 = document.getElementById('btnOne');
+        const btn2 = document.getElementById('btnTwo');
+        const copyText = document.querySelector('.copyText');
+        let hexcode1 ="#b97b19";
+        let hexcode2 ="#e3de93";
+
+        const handleBtn = () =>{
+            let hash = "#";
+            for(let i=0; i<6; i++){
+                let hexvalues = "0123456789abcdef";
+                hash = hash + hexvalues[Math.floor(Math.random() * 16)];
+            }
+            return hash;
+        }
+
+        const handleBtnOne = () =>{
+            hexcode1 = handleBtn();
+            document.body.style.backgroundImage = `linear-gradient(to right, ${hexcode1}, ${hexcode2})`
+            copyText.innerHTML =`Background-image:linear-gradient(to right, ${hexcode1}, ${hexcode2})`
+            copyText.style.backgroundImage =`linear-gradient(to right, ${hexcode1}, ${hexcode2})`
+            btn1.innerText = `${hexcode1}`;
+            btn1.style.backgroundColor = `${hexcode1}`;
+        } 
+        
+        const handleBtnTwo = () =>{
+            hexcode2 = handleBtn();
+            document.body.style.backgroundImage = `linear-gradient(to right, ${hexcode1}, ${hexcode2})`
+            copyText.innerHTML =`Background-image:linear-gradient(to right, ${hexcode1}, ${hexcode2})`
+            copyText.style.backgroundImage =`linear-gradient(to right, ${hexcode1}, ${hexcode2})`
+            btn2.innerText = `${hexcode2}`;
+            btn2.style.backgroundColor = `${hexcode2}`;
+        } 
+
+        btn1.addEventListener('click', handleBtnOne);
+        btn2.addEventListener('click', handleBtnTwo);
+
+        copyText.addEventListener('click', () =>{
+            navigator.clipboard.writeText(copyText.innerText);
+            alert('Copied!!');
+        });
+    </script>
+</body>
+</html>
