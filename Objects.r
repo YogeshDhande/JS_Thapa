@@ -1,7 +1,7 @@
 Objects:-
 
 -Objects are a fundamental part of javascript, providing a way to group related data and functions togehter.
--In javascript, an object is acollection of key-pair value pairs, where each key is to string and ach value can be any data type, including other objects.
+-In javascript, an object is a collection of key-pair value pairs, where each key is to string and ach value can be any data type, including other objects.
 -Objects can have properties and methods, making them versatile for various use cases.
 SYNTAX:- obj= {}
 

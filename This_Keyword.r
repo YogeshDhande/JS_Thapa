@@ -1,4 +1,4 @@
-This Keywors:-
+This Keywords:-
     -In an object method, this referr to the object
     -Alone, this refers to the global object.
     -In a function, this refer to the global object.

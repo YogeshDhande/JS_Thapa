@@ -61,7 +61,7 @@ return arr.indexOf(curElem) === index;
 
 9.Using map to square each number and create a new array
 const numbers = [1,2,3,4,5]
-const result = numbers.map((currElem) => currElem \* currElem);
+const result = numbers.map((currElem) => currElem * currElem);
 console.log(result);
 
 10.using the map method, write a function that takes an array of strings and returns a new array where each string is capitalized

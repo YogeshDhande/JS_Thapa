@@ -201,6 +201,6 @@ map:- createa a new array with transformed elements.
 11.reduce():- the reduce method in javascript is used to accumulate or reduce an array to a single value. It iterates over the elements of an array and applies a callback function to each element, updating an accumulator value with the result. Th reduce method takes a callback function as its first argument and an optional initial value for the accumulator as the second argument.
 Syntax:- array.reduce(function callback(accumulator, currentValue, index, array){
 
-}, initialValue);
+}, initialValue---of accumulator);
 
-
+accumulator ----where your data saves.                  

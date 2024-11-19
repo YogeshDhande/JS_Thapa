@@ -7,5 +7,4 @@
 4.Execution Phase
         call Stack & heap memory
         Hosting & Scope Chain are created here.
-5.Final Output 
-
+5.Final Output

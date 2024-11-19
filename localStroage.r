@@ -10,7 +10,7 @@ localStorage.setItem("Job","No")
 # How to get data in localstorage
 localStorage.getitem("Name");
 
-# How to add data in localstorage
+# How to remove data in localstorage
 localStorage.removeItem("Job");
 
  

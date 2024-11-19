@@ -46,8 +46,27 @@
 // let arr = ["shila", "muni", "laila"]
 // console.log(typeof arr.join());
 
-const numbers = [1, 2, 3, 4, 5, 4, 6, 7, 8, 6, 9];
-     const result = numbers.find((curElem) =>{
-      return curElem > 5;
-     });
-     console.log(result);
+// const numbers = [1, 2, 3, 4, 5, 4, 6, 7, 8, 6, 9];
+//      const result = numbers.find((curElem) =>{
+//       return curElem > 5;
+//      });
+//      console.log(result);
+
+
+str = "JavaScript";
+let reversedStr = str.split('').reverse().join('');
+console.log(reversedStr);
+ 
+reversedString='';
+for(let i = str.length -1; i >=0;i-- ){
+     reversedString += str[i]
+}
+console.log("Reversed String: ",reversedString);
+console.log("---------------------------------------------");
+
+const arr = [1,2,4,7,2,7,8,9,3,4,5,4,6,8,5,7,4,7,8,5,6];
+const uniqueNum = arr.filter((elem, index) =>{
+     return arr.indexOf(elem) === index;
+})
+console.log(uniqueNum.sort());
+

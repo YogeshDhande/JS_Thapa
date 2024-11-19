@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Counter</title>
+</head>
+<body>
+    <h1>Passenger Counter</h1>
+    <h2 id="count-num">0</h2>
+    <button id="btn-in">Increment</button>
+    <button id="save">Save</button>
+    <div class="info"></div>
+    <script>
+        const countNum = document.getElementById("count-num");
+        const info = document.querySelector(".info");
+        let count = 0;
+        const incrementNum = () =>{
+            return countNum.innerHTML = `${count += 1}`;
+        } 
+        
+        const saveInfo =() =>{
+            let para = document.createElement('p');
+            para.innerHTML = `Passenger Count: ${count}`;
+            info.append(para);
+        }
+        document.getElementById("btn-in").addEventListener('click', incrementNum);
+        document.getElementById("save").addEventListener('click', saveInfo);
+    </script>
+</body>
+</html>
